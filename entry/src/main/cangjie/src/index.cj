@@ -26,7 +26,7 @@ class MyView {
             Column {
                 Button(message).onClick {
                     evt => AppLog.info("Hello Cangjie")
-                }.fontSize(40).height(80)
+                }.fontSize(40).height(85)
             }
         }
     }
