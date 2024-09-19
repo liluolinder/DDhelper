@@ -27,7 +27,7 @@ class MyView {
                 Button(message).onClick {
                     evt => AppLog.info("Hello Cangjie")
                 }.fontSize(40).height(80)
-            }.width(100.percent)
-        }.height(100.percent)
+            }
+        }
     }
 }
