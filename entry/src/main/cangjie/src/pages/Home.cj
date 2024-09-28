@@ -28,12 +28,13 @@ public class Home {
     @State
     var message: Int32 = 0
     func build() {
-        Column(5) {
+        Column() {
             Swiper(controller) {
                 Image("/resources/base/media/one.jpg")
-                Image("/resources/base/media/two.jpg")
+                Image("/resources/base/media/two.jpg").height(150)
+                Image("/resources/base/media/three.jpg")
             }
-            .cachedCount(2)
+            .cachedCount(3)
             .index(1)
             .autoPlay(true)
             .interval(4000)
@@ -42,9 +43,13 @@ public class Home {
             .itemSpace(0)
             .curve(Curve.Linear)
             .width(100.percent)
+            .height(150)
             .onChange( {
                     index => AppLog.info(index.toString())
                 })
+            Image("/resources/base/media/one.jpg")
+            .position(x:100,y:100)
+
         }
         .width(100.percent)
         .margin(5)
