@@ -21,11 +21,10 @@ import std.collection.*
 @Entry
 @Component
 public class BS {
-    var arr: ArrayList<Int64> = ArrayList<Int64>([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
-    let scroller = Scroller()
     func build() {
         Column() {
-
+            Search(value:"",placeholder:"输入你心爱的V吧")
+            .searchButton("开始DD！！！")
         }
     }
 }

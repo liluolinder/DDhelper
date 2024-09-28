@@ -6,6 +6,7 @@ import ohos.state_manage.*
 import ohos.state_macro_manage.*
 import ohos_app_cangjie_entry.pages.Home
 import ohos_app_cangjie_entry.pages.BS
+import ohos_app_cangjie_entry.pages.DD
 
 
 @Entry              //用于指明当前页面的 入口组件，一个文件最多只能有一个@Entry，仅能装饰在被@Component 修饰的子组件上
@@ -27,13 +28,13 @@ class MyView {
 
                 TabContent{
                     Column(){
-                    BS()                        //调取Pages目录的Home，生成UI界面
+                    DD()                        //调取Pages目录的DD，生成UI界面
                     }.width(100.percent).height(100.percent)
-                }.tabBar(icon:"/resources/base/media/love.svg", text: "关注").id("tab2")
+                }.tabBar(icon:"/resources/base/media/love.svg", text: "DD").id("tab2")
 
                 TabContent{
                     Column(){
-                    BS()                        //调取Pages目录的Home，生成UI界面
+                    Text("本栏目展示被同人游戏BS收录的V")                       //调取Pages目录的BS，生成UI界面
                     }.width(100.percent).height(100.percent)
                 }.tabBar(icon: "/resources/base/media/love.svg", text: "BlackStorm").id("tab3")
 

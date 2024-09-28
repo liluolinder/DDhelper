@@ -47,9 +47,6 @@ public class Home {
             .onChange( {
                     index => AppLog.info(index.toString())
                 })
-            Image("/resources/base/media/one.jpg")
-            .position(x:100,y:100)
-
         }
         .width(100.percent)
         .margin(5)
