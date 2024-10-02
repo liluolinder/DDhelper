@@ -23,20 +23,20 @@ class MyView {
                     Column(){
                     Home()                        //调取Pages目录的Home，生成UI界面
                     }.width(100.percent).height(100.percent)
-                }.tabBar(icon:  "/resources/base/media/home.svg", text: "主页").id("tab1")    //第一Tab
+                }.tabBar(icon:  "/resources/base/media/tab_home.svg", text: "主页").id("tab1")    //第一Tab
 
 
                 TabContent{
                     Column(){
                     DD()                        //调取Pages目录的DD，生成UI界面
                     }.width(100.percent).height(100.percent)
-                }.tabBar(icon:"/resources/base/media/love.svg", text: "DD").id("tab2")
+                }.tabBar(icon:"/resources/base/media/tab_love.svg", text: "DD").id("tab2")
 
                 TabContent{
                     Column(){
                     Text("本栏目展示被同人游戏BS收录的V")                       //调取Pages目录的BS，生成UI界面
                     }.width(100.percent).height(100.percent)
-                }.tabBar(icon: "/resources/base/media/love.svg", text: "BlackStorm").id("tab3")
+                }.tabBar(icon: "/resources/base/media/tab_love.svg", text: "BlackStorm").id("tab3")
 
                 TabContent{
                     Column(){
@@ -47,7 +47,7 @@ class MyView {
                         .opacity(0.4)
                         .height(100.percent)
                     }.width(100.percent).height(100.percent)
-                }.tabBar(icon:  "/resources/base/media/user.svg", text: "我的").id("tab4")
+                }.tabBar(icon:  "/resources/base/media/tab_user.svg", text: "我的").id("tab4")
             }
          }
     }

@@ -22,29 +22,45 @@ import ohos_app_cangjie_entry.tools.read_from_csv
 @Entry
 @Component
 public class DD {
-   let scroller = Scroller()
-    var arr: ArrayList<String> = ArrayList(["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
 
+    let scroller = Scroller()
+
+    @State
+    var values1: Array<SelectOption> = Array<SelectOption>([
+           SelectOption("linder", icon: "/resources/base/media/startIcon.png"),
+            SelectOption("hanser", icon: "/resources/base/media/startIcon.png")
+            ])
+
+    @State var textValue:String=""
 
     func build() {
-            Scroll(this.scroller) {
-                Column {
+        Scroll(this.scroller) {
+            Column {
+
+                Column{
                     Search(value:"",placeholder:"输入你心爱的V吧")         //搜索框
                     .searchButton("开始DD！！！")
+                    .onSubmit({value => textValue = "你爱的是:"+value })
+                }
 
-                    ForEach(this.arr, itemGeneratorFunc: {item: String, idx: Int64 =>
-                        Text(item.toString())
-                        .width(90.percent)
-                        .height(150)
-                        .backgroundColor(0xFFFFFF)
-                        .borderRadius(15)
-                        .fontSize(16)
-                        .textAlign(TextAlign.Center)
-                        .margin(top: 10)
-                    })
-                }.width(100.percent)
-            }
-            .scrollable(ScrollDirection.Vertical)
-            .scrollBar(BarState.On)
+                Column{
+                    Text(textValue)
+                    .width(100.percent)
+                    .textAlign(TextAlign.Start)
+                    .margin(20)
+
+                }.backgroundColor(Color(220,220,220))
+                .borderRadius(5.percent)
+                .width(100.percent)
+                .height(60)
+                
+
+
+            }.width(100.percent)
+
+
+        }
+        .scrollable(ScrollDirection.Vertical)
+        .scrollBar(BarState.On)
     }
 }
