@@ -17,8 +17,10 @@ import ohos.state_macro_manage.r
 import ohos.base.AppLog
 import std.collection.*
 import ohos_app_cangjie_entry.classes.Swiper_class
-import ohos.resource_manager
+import ohos_app_cangjie_entry.classes.Swiper_class_cjresources;
 
+import ohos.resource_manager
+import cj_res_entry.app
 
 @Entry
 @Component
@@ -29,19 +31,26 @@ public class Home {
 
     let Swiper_img:Array<Swiper_class>=[
         Swiper_class("pic1","/resources/base/media/banner_one_xuehu.png"),
-        Swiper_class("pic2","/resources/base/media/banner_two_tiaxuanji.jpg")
+        Swiper_class("pic2","/resources/base/media/banner_two_tiaxuanji.jpg"),
+        Swiper_class("pic3","/resources/base/media/banner_one_xuehu.png")
         ]
 
+    let Swiper_img_2:Array<Swiper_class_cjresources>=[
+        Swiper_class_cjresources("pic1",@r(app.media.banner_one_xuehu)),
+        Swiper_class_cjresources("pic2",@r(app.media.banner_two_tiaxuanji)),
+        Swiper_class_cjresources("pic3",@r(app.media.banner_three_yousa))
+        ]
 
     func build() {
        Scroll(this.scroller) {
             Column{
                 Swiper(this.controller){
-                    ForEach(this.Swiper_img, itemGeneratorFunc: {item:Swiper_class, idx: Int64 =>
+                    ForEach(this.Swiper_img_2, itemGeneratorFunc: {item:Swiper_class_cjresources, idx: Int64 =>
                         Image(item.pic)
                             .objectFit(ImageFit.Fill)
                             .borderRadius(5.percent)
-                })
+                    })                              //循环遍历Swiper_img数组，生成对应Image
+
 
                 }
                 .cachedCount(1)                 //预加载个数
@@ -51,16 +60,32 @@ public class Home {
                 .duration(1000)                 //子组件切换的动画时长（s）。
                 .curve(Curve.Linear)            //动画曲线
                 .width(100.percent)             //宽度
-                .height(150)                    //高度
+                .height(200)                    //高度
                 .borderRadius(5.percent)        //圆角
+
 
                 Column{
                     Text("近期动态")
-                    .textAlign(TextAlign.Start)
-                    .width(100.percent)
+                    .textAlign(TextAlign.Start) //左对齐
+                    .width(100.percent)         //全宽
                 }
                 .width(100.percent)
-                .margin(20)
+                .backgroundColor(Color(245,245,245))
+                .height(50)
+                .borderRadius(5.percent)
+
+
+                Column{
+                    Text("直播动态")
+                    .textAlign(TextAlign.Start) //左对齐
+                    .width(100.percent)         //全宽
+                }
+                .width(100.percent)
+                .backgroundColor(Color(245,245,245))
+                .height(50)
+                .borderRadius(5.percent)
+
+
 
             }
             .width(100.percent)

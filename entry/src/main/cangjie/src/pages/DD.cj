@@ -31,12 +31,13 @@ public class DD {
             SelectOption("hanser", icon: "/resources/base/media/startIcon.png")
             ])
 
+
+
     @State var textValue:String=""
 
     func build() {
         Scroll(this.scroller) {
             Column {
-
                 Column{
                     Search(value:"",placeholder:"输入你心爱的V吧")         //搜索框
                     .searchButton("开始DD！！！")
@@ -49,7 +50,8 @@ public class DD {
                     .textAlign(TextAlign.Start)
                     .margin(20)
 
-                }.backgroundColor(Color(220,220,220))
+
+                }.backgroundColor(Color(245,245,245))
                 .borderRadius(5.percent)
                 .width(100.percent)
                 .height(60)

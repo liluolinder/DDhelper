@@ -13,4 +13,6 @@ public class Swiper_class{
     	this.id=id
         this.pic=pic
     }
+
+
 }
