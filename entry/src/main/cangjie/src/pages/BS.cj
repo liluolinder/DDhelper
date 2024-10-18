@@ -3,7 +3,6 @@
  */
 package ohos_app_cangjie_entry.pages
 
-
 import ohos.base.*
 import ohos.component.*
 import ohos.state_manage.*

@@ -21,6 +21,8 @@ import ohos_app_cangjie_entry.classes.Swiper_class_cjresources;
 
 import ohos.resource_manager
 import cj_res_entry.app
+import ohos_app_cangjie_entry.resouces.lists
+
 
 @Entry
 @Component
@@ -29,23 +31,17 @@ public class Home {
     var controller: SwiperController = SwiperController()
     let scroller = Scroller()
 
-    let Swiper_img:Array<Swiper_class>=[
-        Swiper_class("pic1","/resources/base/media/banner_one_xuehu.png"),
-        Swiper_class("pic2","/resources/base/media/banner_two_tiaxuanji.jpg"),
-        Swiper_class("pic3","/resources/base/media/banner_one_xuehu.png")
-        ]
-
-    let Swiper_img_2:Array<Swiper_class_cjresources>=[
-        Swiper_class_cjresources("pic1",@r(app.media.banner_one_xuehu)),
-        Swiper_class_cjresources("pic2",@r(app.media.banner_two_tiaxuanji)),
-        Swiper_class_cjresources("pic3",@r(app.media.banner_three_yousa))
-        ]
 
     func build() {
-       Scroll(this.scroller) {
+
+        Scroll(this.scroller) {
+
             Column{
+
                 Swiper(this.controller){
-                    ForEach(this.Swiper_img_2, itemGeneratorFunc: {item:Swiper_class_cjresources, idx: Int64 =>
+
+                    ForEach(
+                        lists.Swiper_img, itemGeneratorFunc: {item:Swiper_class_cjresources, idx: Int64 =>
                         Image(item.pic)
                             .objectFit(ImageFit.Fill)
                             .borderRadius(5.percent)
@@ -65,20 +61,24 @@ public class Home {
 
 
                 Column{
+
                     Text("近期动态")
                     .textAlign(TextAlign.Start) //左对齐
                     .width(100.percent)         //全宽
+
                 }
                 .width(100.percent)
                 .backgroundColor(Color(245,245,245))
                 .height(50)
                 .borderRadius(5.percent)
+                .margin(20)
 
 
                 Column{
                     Text("直播动态")
                     .textAlign(TextAlign.Start) //左对齐
                     .width(100.percent)         //全宽
+                    .margin(10)
                 }
                 .width(100.percent)
                 .backgroundColor(Color(245,245,245))

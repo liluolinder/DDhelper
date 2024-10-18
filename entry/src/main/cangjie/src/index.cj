@@ -13,8 +13,7 @@ import ohos_app_cangjie_entry.pages.DD
 @Component          //用于修饰可重用的 UI 单元，该单元必须为 Class 类型。被修饰的class能够成为一个单独的组件，也被称为自定义组件。
 class MyView {
 
-        var controller:TabsController = TabsController()
-
+    var controller:TabsController = TabsController()
 
     func build() {
          Column(){                                      //沿垂直方向布局的容器

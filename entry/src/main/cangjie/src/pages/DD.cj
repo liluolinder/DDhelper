@@ -19,6 +19,7 @@ import ohos.base.AppLog
 import std.collection.*
 import ohos_app_cangjie_entry.tools.read_from_csv
 
+
 @Entry
 @Component
 public class DD {
@@ -36,8 +37,11 @@ public class DD {
     @State var textValue:String=""
 
     func build() {
+
         Scroll(this.scroller) {
+
             Column {
+
                 Column{
                     Search(value:"",placeholder:"输入你心爱的V吧")         //搜索框
                     .searchButton("开始DD！！！")
