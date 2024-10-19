@@ -3,7 +3,6 @@
  */
 package ohos_app_cangjie_entry.pages
 
-
 import ohos.base.*
 import ohos.component.*
 import ohos.state_manage.*
@@ -19,54 +18,32 @@ import ohos.base.AppLog
 import std.collection.*
 import ohos_app_cangjie_entry.tools.read_from_csv
 
-
 @Entry
 @Component
 public class DD {
-
     let scroller = Scroller()
 
     @State
-    var values1: Array<SelectOption> = Array<SelectOption>([
-           SelectOption("linder", icon: "/resources/base/media/startIcon.png"),
-            SelectOption("hanser", icon: "/resources/base/media/startIcon.png")
-            ])
+    var values1: Array<SelectOption> = Array<SelectOption>(
+        [SelectOption("linder", icon: "/resources/base/media/startIcon.png"),
+        SelectOption("hanser", icon: "/resources/base/media/startIcon.png")])
 
-
-
-    @State var textValue:String=""
+    @State
+    var textValue: String = ""
 
     func build() {
-
         Scroll(this.scroller) {
-
             Column {
-
-                Column{
-                    Search(value:"",placeholder:"输入你心爱的V吧")         //搜索框
-                    .searchButton("开始DD！！！")
-                    .onSubmit({value => textValue = "你爱的是:"+value })
+                Column {
+                    Search(value: "", placeholder: "输入你心爱的V吧") //搜索框
+                        .searchButton("开始DD！！！").onSubmit(
+                        {value => textValue = "你爱的是:" + value})
                 }
 
-                Column{
-                    Text(textValue)
-                    .width(100.percent)
-                    .textAlign(TextAlign.Start)
-                    .margin(20)
-
-
-                }.backgroundColor(Color(245,245,245))
-                .borderRadius(5.percent)
-                .width(100.percent)
-                .height(60)
-                
-
-
+                Column {
+                    Text(textValue).width(100.percent).textAlign(TextAlign.Start).margin(20)
+                }.backgroundColor(Color(245, 245, 245)).borderRadius(5.percent).width(100.percent).height(60)
             }.width(100.percent)
-
-
-        }
-        .scrollable(ScrollDirection.Vertical)
-        .scrollBar(BarState.On)
+        }.scrollable(ScrollDirection.Vertical).scrollBar(BarState.On)
     }
 }

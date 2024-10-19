@@ -3,6 +3,4 @@
  */
 package ohos_app_cangjie_entry.pages
 
-public class love{
-
-}
+public class love {}

@@ -16,18 +16,15 @@ import ohos.state_macro_manage.State
 import ohos.state_macro_manage.r
 import ohos.base.AppLog
 import std.collection.*
-import ohos_app_cangjie_entry.classes.Swiper_class_cjresources;
+import ohos_app_cangjie_entry.classes.Swiper_class_cjresources
 import ohos.resource_manager
 import cj_res_entry.app
 
-
-public class lists{
-    public static var Swiper_img:Array<Swiper_class_cjresources>=[
-        Swiper_class_cjresources("pic1",@r(app.media.banner_one_xuehu)),
-        Swiper_class_cjresources("pic2",@r(app.media.banner_two_tiaxuanji)),
-        Swiper_class_cjresources("pic3",@r(app.media.banner_three_yousa))
-        ]
+public class lists {
+    public static var Swiper_img: Array<Swiper_class_cjresources> = [
+        Swiper_class_cjresources("pic1", @r(app.media.banner_one_xuehu)),
+        Swiper_class_cjresources("pic2", @r(app.media.banner_two_tiaxuanji)),
+        Swiper_class_cjresources("pic3", @r(app.media.banner_three_yousa)),
+        Swiper_class_cjresources("pic4", @r(app.media.banner_four_mmklinke))
+    ]
 }
-
-
-

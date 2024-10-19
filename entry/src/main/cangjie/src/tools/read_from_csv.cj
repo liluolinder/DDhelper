@@ -5,7 +5,5 @@ package ohos_app_cangjie_entry.tools
 
 import std.fs.*
 
-public func read_from_csv()
-{
-
+public func read_from_csv() {
 }

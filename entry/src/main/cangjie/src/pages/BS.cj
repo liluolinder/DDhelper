@@ -22,8 +22,7 @@ import std.collection.*
 public class BS {
     func build() {
         Column() {
-            Search(value:"",placeholder:"输入你心爱的V吧")
-            .searchButton("开始DD！！！")
+            Search(value: "", placeholder: "输入你心爱的V吧").searchButton("开始DD！！！")
         }
     }
 }

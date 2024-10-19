@@ -16,83 +16,69 @@ import ohos.state_macro_manage.State
 import ohos.state_macro_manage.r
 import ohos.base.AppLog
 import std.collection.*
-import ohos_app_cangjie_entry.classes.Swiper_class
-import ohos_app_cangjie_entry.classes.Swiper_class_cjresources;
-
+import ohos_app_cangjie_entry.classes.Swiper_class_cjresources
 import ohos.resource_manager
 import cj_res_entry.app
 import ohos_app_cangjie_entry.resouces.lists
 
-
 @Entry
 @Component
 public class Home {
-
     var controller: SwiperController = SwiperController()
     let scroller = Scroller()
-
 
     func build() {
 
         Scroll(this.scroller) {
 
-            Column{
+            Column {
 
-                Swiper(this.controller){
+                Swiper(this.controller) {
 
                     ForEach(
-                        lists.Swiper_img, itemGeneratorFunc: {item:Swiper_class_cjresources, idx: Int64 =>
-                        Image(item.pic)
-                            .objectFit(ImageFit.Fill)
-                            .borderRadius(5.percent)
-                    })                              //循环遍历Swiper_img数组，生成对应Image
+                        lists.Swiper_img,
+                        itemGeneratorFunc: {
+                            item: Swiper_class_cjresources, idx: Int64 => Image(item.pic).objectFit(ImageFit.Fill).
+                                borderRadius(5.percent)
+                        }
+
+                    ) //循环遍历Swiper_img数组，生成对应Image
+
+                }.cachedCount(1) //预加载个数
+                    .autoPlay(true) //自动播放
+                    .interval(4000) //自动播放间隔（ms）
+                    .loop(true) //循环播放
+                    .duration(1000) //子组件切换的动画时长（s）。
+                    .curve(Curve.Linear) //动画曲线
+                    .width(
+                    100.percent) //宽度
+                        .height(200) //高度
+                        .borderRadius(5.percent) //圆角
+
+                Column {
+                    Text("近期动态").textAlign(TextAlign.Start) //左对齐
+                        .width(100.percent) //全宽
+
+                }.width(100.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(5.percent).margin(20)
+
+                Column {
+                    Text("直播动态").textAlign(TextAlign.Start) //左对齐
+                        .width(100.percent) //全宽
+                        .margin(10)
+                }.width(100.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(5.percent)
+
+                Panel(true){
+
+                }.halfHeight(400)
+                .fullHeight(800)
+                .miniHeight(300)
 
 
-                }
-                .cachedCount(1)                 //预加载个数
-                .autoPlay(true)                 //自动播放
-                .interval(4000)                 //自动播放间隔（ms）
-                .loop(true)                     //循环播放
-                .duration(1000)                 //子组件切换的动画时长（s）。
-                .curve(Curve.Linear)            //动画曲线
-                .width(100.percent)             //宽度
-                .height(200)                    //高度
-                .borderRadius(5.percent)        //圆角
-
-
-                Column{
-
-                    Text("近期动态")
-                    .textAlign(TextAlign.Start) //左对齐
-                    .width(100.percent)         //全宽
-
-                }
-                .width(100.percent)
-                .backgroundColor(Color(245,245,245))
-                .height(50)
-                .borderRadius(5.percent)
-                .margin(20)
-
-
-                Column{
-                    Text("直播动态")
-                    .textAlign(TextAlign.Start) //左对齐
-                    .width(100.percent)         //全宽
-                    .margin(10)
-                }
-                .width(100.percent)
-                .backgroundColor(Color(245,245,245))
-                .height(50)
-                .borderRadius(5.percent)
+            }.width(100.percent)
 
 
 
-            }
-            .width(100.percent)
-
-        }
-        .scrollable(ScrollDirection.Vertical)                   //导航条数值拉动
-        .scrollBar(BarState.On)
-
+        }.scrollable(ScrollDirection.Vertical) //导航条数值拉动
+            .scrollBar(BarState.On)
     }
 }
