@@ -45,15 +45,14 @@ public class Home {
                         ) //循环遍历Swiper_img数组，生成对应Image
 
                     }.cachedCount(1) //预加载个数
-                        .autoPlay(true) //自动播放
-                        .interval(4000) //自动播放间隔（ms）
-                        .loop(true) //循环播放
-                        .duration(1000) //子组件切换的动画时长（s）。
-                        .curve(Curve.Linear) //动画曲线
-                        .width(
-                        100.percent) //宽度
-                            .height(200) //高度
-                            .borderRadius(5.percent) //圆角
+                    .autoPlay(true) //自动播放
+                    .interval(4000) //自动播放间隔（ms）
+                    .loop(true) //循环播放
+                    .duration(1000) //子组件切换的动画时长（s）。
+                    .curve(Curve.Linear) //动画曲线
+                    .width(100.percent) //宽度
+                    .height(200) //高度
+                    .borderRadius(5.percent) //圆角
 
                     Column {
                         Text("近期动态").textAlign(TextAlign.Start) //左对齐
@@ -66,8 +65,6 @@ public class Home {
                             .width(100.percent) //全宽
                             .margin(10)
                     }.width(100.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(5.percent)
-
-
 
 
                 }.width(100.percent)
