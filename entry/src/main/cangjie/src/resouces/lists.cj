@@ -25,6 +25,7 @@ public class lists {
         Swiper_class_cjresources("pic1", @r(app.media.banner_one_xuehu)),
         Swiper_class_cjresources("pic2", @r(app.media.banner_two_tiaxuanji)),
         Swiper_class_cjresources("pic3", @r(app.media.banner_three_yousa)),
-        Swiper_class_cjresources("pic4", @r(app.media.banner_four_mmklinke))
+        Swiper_class_cjresources("pic4", @r(app.media.banner_four_mmklinke)),
+        Swiper_class_cjresources("pic5", @r(app.media.banner_five_hanser))
     ]
 }
