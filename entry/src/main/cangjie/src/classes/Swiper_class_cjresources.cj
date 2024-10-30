@@ -5,7 +5,7 @@ package ohos_app_cangjie_entry.classes
 
 import ohos.base.CJResource
 
-public class Swiper_class_cjresources {
+public  class Swiper_class_cjresources {
     public var id: String
     public var pic: CJResource
 

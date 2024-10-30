@@ -23,10 +23,6 @@ import ohos_app_cangjie_entry.tools.read_from_csv
 public class DD {
     let scroller = Scroller()
 
-    @State
-    var values1: Array<SelectOption> = Array<SelectOption>(
-        [SelectOption("linder", icon: "/resources/base/media/startIcon.png"),
-        SelectOption("hanser", icon: "/resources/base/media/startIcon.png")])
 
     @State
     var textValue: String = ""
