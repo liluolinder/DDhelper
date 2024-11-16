@@ -18,7 +18,7 @@ import ohos.base.AppLog
 import std.collection.*
 import ohos_app_cangjie_entry.tools.read_from_csv
 
-@Entry
+
 @Component
 public class DD {
     let scroller = Scroller()
@@ -37,9 +37,15 @@ public class DD {
                 }
 
                 Column {
-                    Text(textValue).width(100.percent).textAlign(TextAlign.Start).margin(20)
-                }.backgroundColor(Color(245, 245, 245)).borderRadius(5.percent).width(100.percent).height(60)
+
+                }
+                .backgroundColor(Color(245, 245, 245))
+                .borderRadius(5)
+                .width(100.percent)
+                .height(60)
+
             }.width(100.percent)
+
         }.scrollable(ScrollDirection.Vertical).scrollBar(BarState.On)
     }
 }

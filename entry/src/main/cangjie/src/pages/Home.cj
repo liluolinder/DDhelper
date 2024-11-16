@@ -21,7 +21,7 @@ import ohos.resource_manager
 import cj_res_entry.app
 import ohos_app_cangjie_entry.resouces.lists
 
-@Entry
+
 @Component
 public class Home {
     var controller: SwiperController = SwiperController()
@@ -31,16 +31,13 @@ public class Home {
         Column{
             Column{
                  Scroll(this.scroller) {
-
                         Column {
-
                              Swiper(this.controller) {
 
                                     ForEach(
                                         lists.Swiper_img,
                                         itemGeneratorFunc: {
-                                            item: Swiper_class_cjresources, idx: Int64 => Image(item.pic).objectFit(ImageFit.Fill).
-                                                borderRadius(5.percent)
+                                            item: Swiper_class_cjresources, idx: Int64 => Image(item.pic).objectFit(ImageFit.Fill).borderRadius(10)
                                         }
 
                                     ) //循环遍历Swiper_img数组，生成对应Image
@@ -48,25 +45,25 @@ public class Home {
                             }.cachedCount(1) //预加载个数
                             .autoPlay(true) //自动播放
                             .interval(4000) //自动播放间隔（ms）
-                            .loop(true) //循环播放
+                            .loop(true) //循环播放/
                             .duration(1000) //子组件切换的动画时长（ms）。
                             .curve(Curve.Linear) //动画曲线
-                            .width(100.percent) //宽度
-                            .borderRadius(5.percent) //圆角
+                            .width(98.percent) //宽度
+                            .borderRadius(15) //圆角
                             .height(200)
 
                             Column {
                                 Text("近期动态")
-                                .textAlign(TextAlign.Start) //左对齐
+                                /**.textAlign(TextAlign.Start) //左对齐*/
                                 .width(100.percent) //全宽
 
-                            }.width(100.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(5.percent).margin(20)
+                            }.width(98.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(15).margin(20)
 
                             Column {
                                 Text("直播动态").textAlign(TextAlign.Start) //左对齐
                                     .width(100.percent) //全宽
                                     .margin(10)
-                            }.width(100.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(5.percent)
+                            }.width(98.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(15)
 
 
                         }.width(100.percent)

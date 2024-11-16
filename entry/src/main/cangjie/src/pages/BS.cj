@@ -17,7 +17,7 @@ import ohos.state_macro_manage.r
 import ohos.base.AppLog
 import std.collection.*
 
-@Entry
+
 @Component
 public class BS {
     func build() {
