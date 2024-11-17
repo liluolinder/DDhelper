@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "DD助手"
+    },
+    {
+      "name": "man_header_avatar_menu_look",
+      "value": "查看头像"
+    },
+    {
+      "name": "emptyInfo",
+      "value": " "
+    },
+    {
+      "name": "man_header_avatar_chooseFromlocal",
+      "value": "本地选择"
+    },
+    {
+      "name": "man_header_avatar_chooseFromWeb",
+      "value": "网络选取"
+    },
+    {
+      "name": "man_header_avatar_changeAvatar",
+      "value": "更换头像"
     }
   ]
 }

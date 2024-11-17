@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "DDhelper"
+    },
+    {
+      "name": "man_header_avatar_menu_look",
+      "value": "look avatar"
+    },
+    {
+      "name": "emptyInfo",
+      "value": "  "
+    },
+    {
+      "name": "man_header_avatar_chooseFromlocal",
+      "value": "choose from local"
+    },
+    {
+      "name": "man_header_avatar_chooseFromWeb",
+      "value": "choose from Web"
+    },
+    {
+      "name": "man_header_avatar_changeAvatar",
+      "value": "change Avatar"
     }
   ]
 }

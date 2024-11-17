@@ -60,7 +60,8 @@ public class Home {
                             }.width(98.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(15).margin(20)
 
                             Column {
-                                Text("直播动态").textAlign(TextAlign.Start) //左对齐
+                                Text("直播动态")
+                                .textAlign(TextAlign.Start) //左对齐
                                     .width(100.percent) //全宽
                                     .margin(10)
                             }.width(98.percent).backgroundColor(Color(245, 245, 245)).height(50).borderRadius(15)

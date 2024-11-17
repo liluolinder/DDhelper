@@ -14,31 +14,33 @@ import ohos.state_macro_manage.r
 import ohos.base.AppLog
 import std.collection.*
 import cj_res_entry.app
+import ohos.router.*
 
 @Component
-public class head {
-    func build() {
+public class man_content_body {
+
+    func build(){
         Column{
-            Row{
-                Column{
-                    Text("昵称：linder")
-                    Text("简介")
-                }.padding(10)
 
-                Blank()
+            Button{
 
-                Column{
-                    Image(@r(app.media.linder))
-                    .borderRadius(20)
-                    .padding(10)
-                    .height(100.percent)
-                }.height(100.percent)
+                Row{
 
-            }.height(150)
+                    Text("关于我们")
+                    .fontSize(20)
+                    Blank()
+                    Image(@r(app.media.more))
+                    .height(70.percent)
+                    .margin(right:10)
+                }.width(100.percent)
+
+            }.height(50)
             .width(98.percent)
             .backgroundColor(Color(245, 245, 245))
-            .borderRadius(15)
-
+            .margin(top:10)
+            .onClick{event=>Router.push(url:"aboutUS")}
         }
+
     }
+
 }

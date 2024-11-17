@@ -18,14 +18,17 @@ import ohos.base.AppLog
 import std.collection.*
 import cj_res_entry.app
 
-import ohos_app_cangjie_entry.pages.man_cotent.head
+import ohos_app_cangjie_entry.pages.man_cotent.man_content_head
+import ohos_app_cangjie_entry.pages.man_cotent.man_content_body
 
 
 @Component
 public class man {
     func build() {
         Column{
-            head()
+            man_content_head()
+
+            man_content_body()
         }
     }
 }
