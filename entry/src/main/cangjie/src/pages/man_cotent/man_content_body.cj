@@ -15,6 +15,7 @@ import ohos.base.AppLog
 import std.collection.*
 import cj_res_entry.app
 import ohos.router.*
+import ohos.hilog.Hilog
 
 @Component
 public class man_content_body {
@@ -25,7 +26,6 @@ public class man_content_body {
             Button{
 
                 Row{
-
                     Text("关于我们")
                     .fontSize(20)
                     Blank()
@@ -38,7 +38,8 @@ public class man_content_body {
             .width(98.percent)
             .backgroundColor(Color(245, 245, 245))
             .margin(top:10)
-            .onClick{event=>Router.push(url:"aboutUS")}
+            .onClick{event=>Router.push(url:"aboutUS",params:"index")}
+
         }
 
     }
