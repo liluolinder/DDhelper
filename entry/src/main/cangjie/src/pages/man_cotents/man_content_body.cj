@@ -1,4 +1,4 @@
-package ohos_app_cangjie_entry.pages.man_cotent
+package ohos_app_cangjie_entry.pages.man_cotents
 
 import ohos.base.*
 import ohos.component.*
@@ -26,19 +26,23 @@ public class man_content_body {
             Button{
 
                 Row{
+
                     Text("关于我们")
                     .fontSize(20)
+
                     Blank()
-                    Image(@r(app.media.more))
+
+                    Image(@r(app.media.right))
                     .height(70.percent)
                     .margin(right:10)
+
                 }.width(100.percent)
 
             }.height(50)
-            .width(98.percent)
-            .backgroundColor(Color(245, 245, 245))
+            .width(95.percent)
+            .backgroundColor(Color.WHITE)
             .margin(top:10)
-            .onClick{event=>Router.push(url:"aboutUS",params:"index")}
+            .onClick{event=>Router.push(url:"about_us",params:"index")}
 
         }
 

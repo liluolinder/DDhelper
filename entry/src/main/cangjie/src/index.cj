@@ -4,9 +4,9 @@ import ohos.base.*
 import ohos.component.*
 import ohos.state_manage.*
 import ohos.state_macro_manage.*
-import ohos_app_cangjie_entry.pages.Home
-import ohos_app_cangjie_entry.pages.BS
-import ohos_app_cangjie_entry.pages.DD
+import ohos_app_cangjie_entry.pages.home
+import ohos_app_cangjie_entry.pages.bs
+import ohos_app_cangjie_entry.pages.dd
 import ohos_app_cangjie_entry.pages.man
 
 @Entry //用于指明当前页面的 入口组件，一个文件最多只能有一个@Entry，仅能装饰在被@Component 修饰的子组件上
@@ -19,28 +19,28 @@ class MyView {
             Tabs(BarPosition.End, this.controller) { //定义Tab组件，位于底部
                 TabContent {
                     Column() {
-                        Home() //调取Pages目录的Home，生成UI界面
-                    }.width(100.percent).height(100.percent)
+                        home() //调取Pages目录的Home，生成UI界面
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
                 }.tabBar(icon: "/resources/base/media/tab_home.svg", text: "主页").id("tab1") //第一Tab
 
                 TabContent {
                     Column() {
-                        DD() //调取Pages目录的DD，生成UI界面
-                    }.width(100.percent).height(100.percent)
+                        dd() //调取Pages目录的DD，生成UI界面
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
                 }.tabBar(icon: "/resources/base/media/tab_love.svg", text: "DD").id("tab2")
 
                 TabContent {
                     Column() {
                         Text("本栏目展示被同人游戏BS收录的V") //调取Pages目录的BS，生成UI界面
-                    }.width(100.percent).height(100.percent)
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
                 }.tabBar(icon: "/resources/base/media/tab_love.svg", text: "BlackStorm").id("tab3")
 
                 TabContent {
                     Column() {
                         man()
-                    }.width(100.percent).height(100.percent)
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
                 }.tabBar(icon: "/resources/base/media/tab_user.svg", text: "我的").id("tab4")
-            }
+            }.backgroundColor(Color(245,245,245))
         }
     }
 }

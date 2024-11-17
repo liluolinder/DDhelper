@@ -7,20 +7,11 @@ import ohos.base.*
 import ohos.component.*
 import ohos.state_manage.*
 import ohos.state_macro_manage.*
-import ohos.base.LengthProp
-import ohos.state_manage.SubscriberManager
-import ohos.state_manage.ObservedProperty
-import ohos.state_macro_manage.Entry
-import ohos.state_macro_manage.Component
-import ohos.state_macro_manage.State
-import ohos.state_macro_manage.r
-import ohos.base.AppLog
-import std.collection.*
-import ohos_app_cangjie_entry.tools.read_from_csv
+import ohos.router.*
 
 
 @Component
-public class DD {
+public class dd {
     let scroller = Scroller()
 
 
@@ -33,13 +24,13 @@ public class DD {
                 Column {
                     Search(value: "", placeholder: "输入你心爱的V吧") //搜索框
                         .searchButton("开始DD！！！").onSubmit(
-                        {value => textValue = "你爱的是:" + value})
+                        {value => textValue = "你爱的是:" + value}).backgroundColor(Color.WHITE)
                 }
 
                 Column {
 
                 }
-                .backgroundColor(Color(245, 245, 245))
+                .backgroundColor(Color.WHITE)
                 .borderRadius(5)
                 .width(100.percent)
                 .height(60)

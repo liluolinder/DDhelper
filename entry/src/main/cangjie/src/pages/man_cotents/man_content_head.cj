@@ -1,4 +1,4 @@
-package ohos_app_cangjie_entry.pages.man_cotent
+package ohos_app_cangjie_entry.pages.man_cotents
 
 import ohos.base.*
 import ohos.component.*
@@ -23,10 +23,10 @@ public class man_content_head {
      func avatar_menu_choose_builder(){
         Menu{
             MenuItem(startIcon: @r(app.media.layered_image), content:@r(app.string.man_header_avatar_chooseFromlocal),
-                endIcon: @r(app.media.layered_image), labelInfo: @r(app.string.emptyInfo))
+                endIcon: @r(app.media.right), labelInfo: @r(app.string.emptyInfo))
 
             MenuItem(startIcon: @r(app.media.layered_image), content:@r(app.string.man_header_avatar_chooseFromWeb),
-                endIcon: @r(app.media.layered_image), labelInfo: @r(app.string.emptyInfo))
+                endIcon: @r(app.media.right), labelInfo: @r(app.string.emptyInfo))
         }
     }
 
@@ -35,11 +35,11 @@ public class man_content_head {
     func avatar_menu_builder(){
         Menu{
              MenuItem(startIcon: @r(app.media.layered_image), content:@r(app.string.man_header_avatar_menu_look),
-                endIcon: @r(app.media.layered_image), labelInfo: @r(app.string.emptyInfo))
+                endIcon: @r(app.media.right), labelInfo: @r(app.string.emptyInfo))
 
             MenuItem(startIcon: @r(app.media.layered_image),
                 content:@r(app.string.man_header_avatar_changeAvatar),
-                endIcon: @r(app.media.layered_image),
+                endIcon: @r(app.media.right),
                 labelInfo: @r(app.string.emptyInfo),
                 builder: {=> bind(this.avatar_menu_choose_builder,this)()})
 
@@ -66,8 +66,8 @@ public class man_content_head {
                 }.height(100.percent)
 
             }.height(150)
-            .width(98.percent)
-            .backgroundColor(Color(245, 245, 245))
+            .width(95.percent)
+            .backgroundColor(Color.WHITE)
             .borderRadius(15)
 
         }
