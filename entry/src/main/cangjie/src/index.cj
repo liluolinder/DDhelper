@@ -20,27 +20,27 @@ class MyView {
                 TabContent {
                     Column() {
                         home() //调取Pages目录的Home，生成UI界面
-                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(241,243,245))
                 }.tabBar(icon: "/resources/base/media/tab_home.svg", text: "主页").id("tab1") //第一Tab
 
                 TabContent {
                     Column() {
                         dd() //调取Pages目录的DD，生成UI界面
-                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(241,243,245))
                 }.tabBar(icon: "/resources/base/media/tab_love.svg", text: "DD").id("tab2")
 
                 TabContent {
                     Column() {
-                        Text("本栏目展示被同人游戏BS收录的V") //调取Pages目录的BS，生成UI界面
-                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
+                        bs()
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(241,243,245))
                 }.tabBar(icon: "/resources/base/media/tab_love.svg", text: "BlackStorm").id("tab3")
 
                 TabContent {
                     Column() {
                         man()
-                    }.width(100.percent).height(100.percent).backgroundColor(Color(245,245,245))
+                    }.width(100.percent).height(100.percent).backgroundColor(Color(241,243,245))
                 }.tabBar(icon: "/resources/base/media/tab_user.svg", text: "我的").id("tab4")
-            }.backgroundColor(Color(245,245,245))
+            }.backgroundColor(Color(241,243,245))
         }
     }
 }

@@ -14,13 +14,14 @@ public class home_body {
                 Text("近期动态")
                 .textAlign(TextAlign.Start) //左对齐
                 .width(100.percent) //全宽
+                .margin(top:5)
             }.width(98.percent).backgroundColor(Color.WHITE).height(50).borderRadius(15).margin(20)
 
             Column {
                 Text("直播动态")
                 .textAlign(TextAlign.Start) //左对齐
                 .width(100.percent) //全宽
-                .margin(10)
+                .margin(top:5)
             }.width(98.percent).backgroundColor(Color.WHITE).height(50).borderRadius(15)
 
         }

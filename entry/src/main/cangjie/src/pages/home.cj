@@ -32,6 +32,7 @@ public class home {
 
                 }
             }
+            .backgroundColor(Color.WHITE)
             .fullHeight(800)
             .halfHeight(360)
             .miniHeight(360)

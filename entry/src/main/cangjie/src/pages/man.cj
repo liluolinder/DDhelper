@@ -19,7 +19,7 @@ public class man {
         Column{
             man_content_head()
             man_content_body()
-        }.backgroundColor(Color(245, 245, 245))
+        }.backgroundColor(Color(241,243,245))
         .height(100.percent)
         .width(100.percent)
     }

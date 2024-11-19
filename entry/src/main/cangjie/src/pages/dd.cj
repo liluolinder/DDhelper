@@ -24,7 +24,7 @@ public class dd {
                 Column {
                     Search(value: "", placeholder: "输入你心爱的V吧") //搜索框
                         .searchButton("开始DD！！！").onSubmit(
-                        {value => textValue = "你爱的是:" + value}).backgroundColor(Color.WHITE)
+                        {event=>Router.push(url:"vup_des")}).backgroundColor(Color.WHITE)
                 }
 
                 Column {
