@@ -3,6 +3,14 @@ import ohos_app_cangjie_entry.classes.bs_character_skill_class
 
 public class bs_character_skill_list{
 
+    //灰烬
+
+    //tnt
+    public static var bs_huijing_tnt_skill:bs_character_skill_class=
+        bs_character_skill_class("","部署时准备效率秒数的时间。准备完成后，敌人触碰时爆炸，对单格范围内的敌人造成1000点真实伤害。",
+            "","","","")
+
+
     //大白猫，艾尔莎 能力表
     public static var bs_elza_skill_list:bs_character_skill_class=
         bs_character_skill_class("","攻击前方一格范围内的敌人，造成力量数值的伤害，并对其施加2层追猎",
