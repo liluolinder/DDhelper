@@ -17,4 +17,7 @@ public class bs_character_skill_list{
             "冰原剑术·陨冰","攻击前方三格内的所有敌人，造成力量*2的伤害，对范围内的敌人施加等同于其（追猎层数/2）秒数的低温效果（至多3秒），若其拥有10层以上的追猎则额外施加1.5秒的冰冻。",
             "集群狩猎","场上存在的【猎手】角色数量为7及以上时，普通能力和特殊技能施加的效果层数变为原本的两倍。")
 
+    public static var bs_empty_skill_list:bs_character_skill_class=
+        bs_character_skill_class("","","","","","")
+
 }

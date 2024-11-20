@@ -11,6 +11,9 @@ import ohos.router.*
 import ohos_app_cangjie_entry.resouces.lists
 import std.collection.*
 import cj_res_entry.app
+import ohos.hilog.Hilog
+
+var name:Option<String>=Router.getParams()
 
 @Entry //用于指明当前页面的 入口组件，一个文件最多只能有一个@Entry，仅能装饰在被@Component 修饰的子组件上
 @Component //用于修饰可重用的 UI 单元，该单元必须为 Class 类型。被修饰的class能够成为一个单独的组件，也被称为自定义组件。
@@ -20,13 +23,16 @@ class vup_bs_des{
         Column{
             Row{
                 Button(){
-                    Image(@r(app.media.left)).height(100.percent)
-                    
+                    Row{
+                        Image(@r(app.media.left)).height(100.percent).margin(left:5)
+                        Text(name.toString())
+                        Blank()
+                    }.width(100.percent)
                 }.shape(ShapeType.Normal).backgroundColor(Color(241,243,245)).onClick{event=>Router.back()}.width(100.percent)
             }.width(100.percent)
             .height(30)
             .backgroundColor(Color(241,243,245))
-            .margin(bottom:5)
+            .margin(bottom:10)
 
             Column{
 

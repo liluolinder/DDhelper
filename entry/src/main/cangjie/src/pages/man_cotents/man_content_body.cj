@@ -22,9 +22,7 @@ import ohos_app_cangjie_entry.classes.push_pages_class
 public class man_content_body {
 
     func build(){
-
         Column{
-
             ForEach(lists.man_button_string,itemGeneratorFunc: {buttons:push_pages_class, idx: Int64 =>
                         Button{
                             Row{
@@ -44,7 +42,7 @@ public class man_content_body {
                         .width(95.percent)
                         .backgroundColor(Color.WHITE)
                         .margin(top:10)
-                        .onClick{event=>Router.push(url:buttons.page)}
+                        .onClick{event=>Router.push(url:buttons.page,params:"1234")}
                     })
         }
     }
