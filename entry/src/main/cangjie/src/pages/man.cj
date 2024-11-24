@@ -8,7 +8,6 @@ import ohos.component.*
 import ohos.state_manage.*
 import ohos.state_macro_manage.*
 import ohos.router.*
-
 import ohos_app_cangjie_entry.pages.man_cotents.man_content_head
 import ohos_app_cangjie_entry.pages.man_cotents.man_content_body
 

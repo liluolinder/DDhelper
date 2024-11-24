@@ -11,9 +11,12 @@ import ohos.router.*
 import ohos_app_cangjie_entry.resouces.lists
 import ohos_app_cangjie_entry.classes.bs_character_classs
 import ohos_app_cangjie_entry.classes.bs_character_variety_class
+import encoding.json.JsonObject
+import encoding.json.ToJson
 
 @Component
 public class bs_content_body1{
+
     func build(){
         Column() {
                 List(space:20,initialIndex:0){
@@ -25,9 +28,9 @@ public class bs_content_body1{
                                         ForEach(item.bs_character_variety_class_list, itemGeneratorFunc:{character:bs_character_classs,index:Int64=>
                                                     ListItem(){
                                                         Column{
-                                                        Image(character.pic).height(85.percent).borderRadius(15)
-                                                        Text(character.name)
-                                                        }.onClick{event=>Router.push(url:"vup_bs_des")}
+                                                            Image(character.pic).height(85.percent).borderRadius(15)
+                                                            Text(character.name)
+                                                        }.onClick{event=>Router.push(url:"vup_bs_des",params:character.index)}
                                                     }.borderRadius(15)
                                                     .height(100.percent)
 
