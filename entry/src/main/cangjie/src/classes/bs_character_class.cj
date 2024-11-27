@@ -29,3 +29,4 @@ public class bs_character_classs{
         this.skill_list=skill_list
     }
 }
+

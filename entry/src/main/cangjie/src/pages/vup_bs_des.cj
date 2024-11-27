@@ -100,8 +100,14 @@ class vup_bs_des{
             .scrollBar(BarState.Off)
 
             Column{
-
-            }
+                Scroll{
+                    Text("131414").width(100.percent)
+                }
+            }.backgroundColor(Color.WHITE)
+            .width(95.percent)
+            .height(200)
+            .margin(top:20)
+            .borderRadius(15)
 
         }.height(100.percent)
         .width(100.percent)

@@ -21,3 +21,4 @@ public class bs_character_skill_list{
         bs_character_skill_class("","","","","","")
 
 }
+
