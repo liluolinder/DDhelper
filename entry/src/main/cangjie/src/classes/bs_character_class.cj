@@ -16,10 +16,11 @@ public class bs_character_classs{
     public var label:String
     public var main_attribute:Array<String>
     public var skill_list:bs_character_skill_class
+    public var colorfulEgg:String
+    public var story:String
 
 
-
-    public init(index:String,name:String,pic:CJResource,race:String,label:String,main_attribute:Array<String>,skill_list:bs_character_skill_class){
+    public init(index:String,name:String,pic:CJResource,race:String,label:String,main_attribute:Array<String>,skill_list:bs_character_skill_class,colorfulEgg:String,story:String){
         this.index=index
         this.name=name
         this.pic=pic
@@ -27,6 +28,11 @@ public class bs_character_classs{
         this.label=label
         this.main_attribute=main_attribute
         this.skill_list=skill_list
+        this.colorfulEgg=colorfulEgg
+        this.story=story
     }
+
+
+
 }
 

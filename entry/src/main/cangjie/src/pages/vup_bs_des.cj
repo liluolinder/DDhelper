@@ -64,7 +64,7 @@ class vup_bs_des{
 
                 Column{
                     Image(character.pic).height(98.percent)
-                }.height(100.percent).onClick{event=>PromptAction.showToast(message:"再怎么点，也放大不了，哼（-_-）")}
+                }.height(100.percent).onClick{event=>PromptAction.showToast(message:if(character.colorfulEgg==""){"再怎么点，也放不大哼(-_-)"}else{character.colorfulEgg})}
             }.width(95.percent)
             .height(150)
             .backgroundColor(Color.WHITE)
@@ -101,7 +101,7 @@ class vup_bs_des{
 
             Column{
                 Scroll{
-                    Text("131414").width(100.percent)
+                    Text(character.story).width(100.percent).lineHeight(40)
                 }
             }.backgroundColor(Color.WHITE)
             .width(95.percent)
